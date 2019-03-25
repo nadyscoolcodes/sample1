@@ -1,0 +1,216 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-8">
+              <div class="card">
+                  <div class="card-header card-header-danger" style="background-color: #217093">
+                      <h4 class="card-title">Employee Profile</h4>
+                      <p class="card-category">Complete your profile</p>
+                  </div>
+                  
+                  <br>
+
+                  <div class="card-body" >
+                      <form>
+                          <!--method="POST" (submit)="addEmployee()"-->
+                        <div id="accordion">
+                          <div class="card">
+                          <button  class="card-header card-header-danger" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"aria-controls="collapseThree">
+                              <h6 class="card-title" >Personal Information</h6>
+                            </button><br>
+                            <!-- <div class="col-md-5"> 
+                              <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Company (disabled)" disabled>
+                                 </mat-form-field>
+                              </div>-->
+                     <div id="divA">
+                      <div id="collapseThree"class="collapse show"  data-parent="#accordion">
+                              <div class="row" >
+                              <div class="col-md-7" >
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Employee ID"  type="number"  class="form"  [(ngModel)]="model.emp_Id" name="emp_Id" id="emp_Id">
+                                  </mat-form-field>
+  
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6">
+                               <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="First Name" type="text" [(ngModel)]="model.f_name" name ="f_name" id="f_name" >
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-6">
+                               <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Last Name" type="text" [(ngModel)]="model.l_name"  name="l_name" id="l_name">
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                             <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Date Of Birth" type="text" name="dob" id="dob" [(ngModel)]="model.dob">
+                              </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                             <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Father/Guardian Name" type="text" name="father_name" id="father_name"  [(ngModel)]="model.father_name">
+                              </mat-form-field>
+                            </div>
+                          </div>
+                             <div class="row">
+                               <div class="col-md-6" style="color:gray">
+                            <label name="gen" id ="gen"[(ngModel)]="model.gen">Select your Gender</label><br>
+                            <input type="radio"  value="Male"> Male<br>
+                            <input type="radio" value="Female"> Female
+                            </div>
+                            <div class="col-md-6">
+                               <label >Marital Status</label>
+                               <!-- <select style="width:75px;color:gray">	
+                                    <option value="select one" >select One </option>
+                                    <option value="single">Single</option>
+                                    <option value="married">Married</option>
+                                    </select>-->
+                          <div class="dropdown" style="margin-left:-30px">
+                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:gray">
+                          Select one
+                          </button>
+                              <div class="dropdown-menu" name="maritial_status"  id="maritial_status" [(ngModel)]="model.maritial_status" aria-labelledby="Maritalstatus">
+                          <a class="dropdown-item" value="single">Single</a>
+                          <a class="dropdown-item" value="married">Married</a>
+                            </div>
+                            </div> 
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-md-4">
+                             <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Date of joining" type="text" name="doj" id="doj" [(ngModel)]="model.doj">
+                              </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                             <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Mobile Number" type="text" name="c_no" id="c_no" [(ngModel)]="model.c_no">
+                              </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                             <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Qualification" type="text" name="qua" id="qua" [(ngModel)]="model.qua" >
+                              </mat-form-field>
+                            </div>
+                        <div class="col-md-4">
+                         <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Email Id" type="text" name="email_id" id="email_id" [(ngModel)]="model.email_id"  >
+                          </mat-form-field>
+                        </div>
+                            <div class="col-md-4">
+                             <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Blood Group" type="text" name="blood_group" id="blood_group" [(ngModel)]="model.blood_group">
+                              </mat-form-field>
+                            </div>     
+                            <div class="col-md-4">
+                             <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Passport No" type="text" name="pass_no" id="pass_no" [(ngModel)]="model.pass_no">
+                              </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Address" type="text" name="address" id="address" [(ngModel)]="model.address">
+                             </mat-form-field>
+                            </div>
+                        </div>
+                          <div class="row">
+                              <div class="col-md-4">
+                              <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="City" type="text" name="city" id="city" [(ngModel)]="model.city">
+                               </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                              <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Country" type="text" name="country" id="country" [(ngModel)]="model.country">
+                               </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                              <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Postal Code" type="text" name="p_code" id="p_code" [(ngModel)]="model.p_code">
+                               </mat-form-field>
+                              </div>
+                           </div>
+                       </div>
+                     </div>
+                     </div>
+                      
+                        <br>
+                        <div class="card">
+                         <button  class="card-header card-header-danger" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              <h5 class="card-title" id="clockButton">Emergency Contact</h5>  
+                         </button><br>
+                    <div id="divB">
+                         <div id="collapseOne" class="collapse show"  data-parent="#accordion">
+                        <div class="row">
+                          <div class="col-md-4">
+                          <mat-form-field class="example-full-width">
+                              <input matInput placeholder="Person Name" type="text" name="emg_name" id="emg_name" [(ngModel)]="model.emg_name">
+                           </mat-form-field>
+                          </div>
+                          <div class="col-md-4">
+                          <mat-form-field class="example-full-width">
+                              <input matInput placeholder="Contact Details" type="text" name="emg_contact" id="emg_contact" [(ngModel)]="model.emg_contact">
+                           </mat-form-field>
+                          </div>
+                          <div class="col-md-4">
+                          <mat-form-field class="example-full-width">
+                              <input matInput placeholder="Relationship" type="text" name="re_ship" id="re_ship" [(ngModel)]="model.re_ship">
+                           </mat-form-field>
+                          </div>
+                      </div>
+                      </div>
+                    </div>
+                    </div>
+                     <br>
+                        <div class="card">                      
+                      <button  class="card-header card-header-danger" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <h6 class="card-title">Bank Account Details</h6>
+                      </button><br>
+                      <div id="divC">
+                      <div id="collapseTwo" class="collapse show"  data-parent="#accordion">
+                    <div class="row">
+                      <div class="col-md-4">
+                      <mat-form-field class="example-full-width">
+                          <input matInput placeholder="Bank Account Number" type="text" name="ac_no" id="ac_no" [(ngModel)]="model.ac_no">
+                       </mat-form-field>
+                      </div>
+                      <div class="col-md-4">
+                      <mat-form-field class="example-full-width">
+                          <input matInput placeholder="Bank Name" type="text" name="bank_name" id="bank_name" [(ngModel)]="model.bank_name">
+                       </mat-form-field>
+                      </div>
+                      <div class="col-md-4">
+                      <mat-form-field class="example-full-width">
+                          <input matInput placeholder="Branch Name" type="text" name="branch_name" id="branch_name" [(ngModel)]="model.branch_name">
+                       </mat-form-field>
+                      </div>
+                      <div class="col-md-4">
+                      <mat-form-field class="example-full-width">
+                          <input matInput placeholder="Bank-IFSC Code" type="text" name="ifsc_code" id="ifsc_code" [(ngModel)]="model.ifsc_code">
+                       </mat-form-field>
+                      </div>
+                      <div class="col-md-4">
+                      <mat-form-field class="example-full-width">
+                          <input matInput placeholder="PF – UAN no. if any" type="text" name="pf_no" id="pf_no" [(ngModel)]="model.pf_no" >
+                       </mat-form-field>
+                      </div>
+                  </div>
+                  </div>
+                </div>      
+                </div>   
+               </div>
+                 <button mat-raised-button type="submit" class="btn btn-danger pull-right">save</button>
+                 </form> 
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

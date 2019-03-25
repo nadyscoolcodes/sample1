@@ -1,0 +1,92 @@
+<html>
+  <script>
+    function viewPassword()
+{
+  var passwordInput = document.getElementById('password-field');
+  var passStatus = document.getElementById('pass-status');
+ 
+  if (passwordInput.type == 'password'){
+    passwordInput.type='text';
+    passStatus.className='fa fa-eye-slash';
+    
+  }
+  else{
+    passwordInput.type='password';
+    passStatus.className='fa fa-eye';
+  }
+}
+    </script>
+  <body>
+<div id="back">
+       
+      </div>
+      
+      <div id="slideBox">
+       <!-- <div class="topLayer">-->
+          <!--<div class="left">
+            <div class="content">
+              <h2>Sign Up</h2>
+              <form method="post" onsubmit="return false;">
+                <div class="form-group">
+                  <input type="text" placeholder="username" />
+                </div>
+                <div class="form-group"></div>
+                <div class="form-group"></div>
+                <div class="form-group"></div>
+              </form>
+              <button id="goLeft" class="off">Login</button>
+              <button>Sign up</button>
+            </div>
+          </div>-->
+        <!--  <div class="right">-->
+           <!-- <div class="content">-->
+              
+               <form method="post" onsubmit="return false;">
+               
+                <div class="form-group">
+                  
+                    <img   src="assets/img/unqlogo.png" class="img">
+                    <label for="inp" class="inp">
+                      <input type="text" id="strLoginId" required  #strLoginId="ngModel" [class.is-invalid]="strLoginId.invalid && strLoginId.touched" name="strLoginId" [(ngModel)]="model.strLoginId" class="form-control" placeholder="&nbsp;" >
+                      <span class="label">Enter your user name</span>
+                      <small [class.d-none]="strLoginId.valid || strLoginId.touched" style="margin-left:16px;"> login id required</small><br>
+                      </label><br>
+                    
+                  
+                  
+                      <label for="inp" class="inp">
+                      <input type="password" id="strPassword" name="strPassword" placeholder="&nbsp;" [(ngModel)]="model.strPassword" required>
+                      <span class="label">Enter your password</span>
+                     
+                     <!-- <span class="border"></span>-->
+                    </label>
+                    
+                 <!-- <input type="text"  class="form-control" name="userName" id="userName" placeholder="username"[(ngModel)]="Usr.userName"  required/>
+                
+                  <input type="password"  class="form-control" placeholder="password" name="password" id="password" [(ngModel)]="Usr.password"  required/>-->
+                 
+                  <i id="pass-status" class="fa fa-eye" aria-hidden="true" (onClick)="viewPassword()"></i>
+               
+                <table>
+                  <tr>
+                 <td> <h1 style="color:#217093;margin-left: 17px;font-size: 14px;font-family: sans-serif;" (click)='mailsend(model)'>forgotpassord?</h1></td>
+                 
+                
+                  
+                  <td><button id="login" type="submit" (click)='onSubmitNew(model.strLoginId,model.strPassword)'>Login</button></td>
+               
+                    <!--<a href="#" class="fpwd" >forgotpassord? </a>-->
+                </table>
+              </div>
+              </form>
+              
+          <!--  </div>-->
+          <!--</div>-->
+        <!--</div>-->
+      </div>
+      </body>
+      </html>
+      
+     
+      
+    

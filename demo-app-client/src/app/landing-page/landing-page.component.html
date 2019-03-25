@@ -1,0 +1,102 @@
+
+
+<form id="form1">  
+  <div class="container py-4">  
+      <div class="card">  
+          <div class="card-header bg-primary text-white">  
+              <h5 class="card-title text-uppercase">Employee Details</h5>  
+          </div>  
+          <div class="card-body">  
+              <button type="button" class="btn btn-primary rounded-0" data-toggle="modal" data-target="#myModal">  
+                  <i class="fa fa-plus-circle"></i>Add New  
+              </button>  
+              <div class="modal" id="myModal">  
+                  <div class="modal-dialog modal-lg">  
+                      <div class="modal-content">  
+                          <div class="modal-header">  
+                              <h5 class="modal-title">Employee Details</h5>  
+                              <button type="button" class="close" data-dismiss="modal">×</button>  
+                          </div>  
+                          <div class="modal-body">  
+                              <div class="row">  
+                                  <div class="col-md-6">  
+                                      <div class="form-group">  
+                                          <label>Name:</label> 
+                                          <input type="text">
+                                          <div class="input-group">  
+                                              <div class="input-group-prepend">  
+                                                  <span class="input-group-text"><i class="fa fa-user"></i></span>  
+                                              </div>  
+                                              
+                                          </div>  
+                                      </div>  
+                                  </div>  
+                                  <div class="col-md-6">  
+                                      <div class="form-group">  
+                                          <label>Position:</label>  
+                                          <div class="input-group">  
+                                              <div class="input-group-prepend">  
+                                                  <span class="input-group-text"><i class="fa fa-suitcase"></i></span>  
+                                              </div>  
+                                               
+                                          </div>  
+                                      </div>  
+                                  </div>  
+                              </div>  
+                              <div class="row">  
+                                  <div class="col-md-6">  
+                                      <div class="form-group">  
+                                          <label>Office:</label>  
+                                          <div class="input-group">  
+                                              <div class="input-group-prepend">  
+                                                  <span class="input-group-text"><i class="fa fa-building"></i></span>  
+                                              </div>  
+                                             
+                                          </div>  
+                                      </div>  
+                                  </div>                                       
+                                  <div class="col-md-6">  
+                                      <div class="form-group">  
+                                          <label>Profile Picture:</label>  
+                                          <div class="custom-file">  
+                                               
+                                              <label class="custom-file-label"></label>  
+                                          </div>  
+                                      </div>  
+                                  </div>  
+                              </div>  
+                          </div>  
+                          <div class="modal-footer">  
+                              <button type="button" class="btn btn-danger rounded-0" data-dismiss="modal">Close</button>  
+                          </div>  
+                      </div>  
+                  </div>  
+              </div>  
+              <div class="list">
+              <div class="row">  
+                  <div class="col-md-3 col-sm-6" *ngFor=" let employee of employ"  (click)="onSelect(employee)">  
+                      <div class="our-team">  
+                          <div class="pic">  
+                            <!--<img ng-src="{{emplopye.Profile_Picture}}" />  -->
+                          
+                            <img src= {{employee.imagePath}}>
+                          </div>  
+                          <h3 class="title">{{employee.lngEmpId}}</h3>  
+                          <span class="post">{{employee.strFst_Name}}</span>  
+                           <span class="post">{{employee.strLst_Name}}</span>
+                          <!-- <span class="post">{{employee.imagePath}}</span>-->
+                          <ul class="social">  
+                              <li><a href="#" class="fa fa-facebook"></a></li>  
+                              <li><a href="#" class="fa fa-twitter"></a></li>  
+                              <li><a href="#" class="fa fa-google-plus"></a></li>  
+                              <li><a href="#" class="fa fa-linkedin"></a></li>  
+                          </ul>  
+                      </div>  
+                  </div>  
+              </div>  
+          </div>  
+      </div>  
+      </div>
+  </div>
+</form>
+

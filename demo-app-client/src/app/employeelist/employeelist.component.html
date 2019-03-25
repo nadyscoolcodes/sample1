@@ -1,0 +1,56 @@
+<html><h2> User Details</h2>
+<button class="btn btn-danger"  style="margin-right: 20px;" (click)="login()">login</button>
+ <button class="btn btn-danger"  style="margin-left: 20px;" (click)="save()">Add Employee</button>
+<div class="col-md-10" >
+         <!--  <table class="table table-striped">
+             
+          <thead><tr>             
+              <th> </th>
+            <th class="hidden">EmployeeId</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>EmailId</th>
+            <th> </th>
+            <th> </th>
+            <th> </th>
+            <!--th> <button class="btn btn-danger" style="width: 10em;"(click)="onSelect(item)"> Delete</button></th-->
+          <!--</tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let employeelist of employees; let i = index" [class.active]="i == selectedRow">
+              
+            <td><img mat-card-avatar src="assets/img/rose.jpg" style="height: 3em; width: 3em;"></td>
+              <td class="hidden" scope="row" >{{employeelist.lngEmpId}}</td>
+              <td>{{employeelist.strFstNme }}</td>
+              <td>{{employeelist.strLst_Name}}</td>
+              <td>{{employeelist.strPerEmail}}</td>
+              <td><button class="btn" ><i class="fa fa-edit" (click)="edit(employeelist)" ></i></button></td>
+              <!--(click)="edit(employeelist)" (click)="getoneemployee(employeelist.emp_Id)"-->
+          <!--   <td><button class="btn" (click)="remove(employeelist.emp_Id)" ><i class="fa fa-trash"></i></button></td>
+            <td><!--<button class="btn btn-danger" (click)="deleteUser(user)"> Delete</button>
+              <button class="btn btn-danger" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button>-->
+        <!--    </td>
+          </tr>
+          </tbody>
+        </table>-->
+  
+     
+  
+
+<mat-card style=" height: 15em; width: 10em;">
+  <mat-card-header>
+    
+  </mat-card-header>
+ &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<img mat-card-avatar src="assets/img/rose.jpg" style="height: 5em; width: 5em;margin-left: -23px;
+ margin-right: 3px;">
+ <mat-card-title>Priya</mat-card-title>
+  <mat-card-subtitle>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Unique</mat-card-subtitle>
+  <mat-card-content>
+  
+    <p>  Unique Systems</p>
+  </mat-card-content>
+</mat-card>
+
+</div>
+
+  </html>
